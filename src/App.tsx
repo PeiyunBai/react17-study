@@ -1,6 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/*
+ * @Author: baipeiyun
+ * @Date: 2022-01-14 17:59:38
+ * @LastEditors: baipeiyun
+ * @LastEditTime: 2022-01-14 18:16:25
+ * @FilePath: /482mooc-react17/src/App.tsx
+ * @Description:
+ */
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -19,6 +27,16 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+        23232<div>2323232323</div>
+        <p>hhhhh</p>
+        <p>hhhhh</p>
+        <p>hhhhh</p>
+        <p>hhhhh</p>
+        <p>hhhhh</p>
+        <p>hhhhh</p>
+        <p>hhhhh</p>
+      </div>
     </div>
   );
 }
