@@ -2,8 +2,8 @@
  * @Author: baipeiyun
  * @Date: 2022-03-07 11:14:29
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-07 17:19:12
- * @FilePath: /482mooc-react17/src/screen/project-list/index.jsx
+ * @LastEditTime: 2022-03-07 18:47:02
+ * @FilePath: /482mooc-react17/src/screen/project-list/index.tsx
  * @Description:
  */
 import React, { useEffect, useState } from "react";
@@ -13,7 +13,6 @@ import { cleanObject, useMount, useDebounce } from "utils/index";
 import qs from "qs";
 
 const apiUrl = process.env.REACT_APP_API_URL;
-console.log(apiUrl);
 
 export const ProjectListScreen = () => {
   const [users, setUsers] = useState([]);
@@ -21,7 +20,7 @@ export const ProjectListScreen = () => {
     name: "",
     personId: "",
   });
-  const debounceParam = useDebounce(param, 2000);
+  const debounceParam = useDebounce(param, 500);
   const [list, setList] = useState([]);
 
   // 当param改变时获取

@@ -2,12 +2,24 @@
  * @Author: baipeiyun
  * @Date: 2022-03-07 11:14:36
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-07 17:22:17
- * @FilePath: /482mooc-react17/src/screen/project-list/list.jsx
+ * @LastEditTime: 2022-03-07 18:37:35
+ * @FilePath: /482mooc-react17/src/screen/project-list/list.tsx
  * @Description:
  */
 import React from "react";
-export const List = ({ list, users }) => {
+import { User } from "./search-panel";
+interface Project {
+  id: string;
+  name: string;
+  personId: string;
+  pin: boolean;
+  organization: string;
+}
+interface ListProps {
+  list: Project[];
+  users: User[];
+}
+export const List = ({ list, users }: ListProps) => {
   return (
     <table>
       <thead>
