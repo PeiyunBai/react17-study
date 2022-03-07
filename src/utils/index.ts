@@ -2,13 +2,13 @@
  * @Author: baipeiyun
  * @Date: 2022-03-07 15:47:07
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-07 18:45:30
+ * @LastEditTime: 2022-03-07 20:15:01
  * @FilePath: /482mooc-react17/src/utils/index.ts
  * @Description:
  */
 import { useEffect, useState } from "react";
 
-export const isFalsy = (value: any) => (value === 0 ? false : value);
+export const isFalsy = (value: unknown) => (value === 0 ? false : value);
 
 // 清空object中为空的值
 export const cleanObject = (object: object) => {
@@ -34,7 +34,7 @@ export const useMount = (callback: () => void) => {
 };
 
 // 自定义防抖
-export const useDebounce = (value: any, delay?: number) => {
+export const useDebounce = (value: unknown, delay?: number): any => {
   const [debouncedvalue, setDebouncedValue] = useState(value);
 
   useEffect(() => {
