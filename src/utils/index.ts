@@ -2,7 +2,7 @@
  * @Author: baipeiyun
  * @Date: 2022-03-07 15:47:07
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-07 20:15:01
+ * @LastEditTime: 2022-03-07 20:20:51
  * @FilePath: /482mooc-react17/src/utils/index.ts
  * @Description:
  */
@@ -34,7 +34,7 @@ export const useMount = (callback: () => void) => {
 };
 
 // 自定义防抖
-export const useDebounce = (value: unknown, delay?: number): any => {
+export const useDebounce = <V>(value: V, delay?: number) => {
   const [debouncedvalue, setDebouncedValue] = useState(value);
 
   useEffect(() => {
