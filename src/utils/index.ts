@@ -2,7 +2,7 @@
  * @Author: baipeiyun
  * @Date: 2022-03-07 15:47:07
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-07 20:20:51
+ * @LastEditTime: 2022-03-07 21:02:38
  * @FilePath: /482mooc-react17/src/utils/index.ts
  * @Description:
  */
@@ -45,4 +45,20 @@ export const useDebounce = <V>(value: V, delay?: number) => {
   }, [value, delay]);
 
   return debouncedvalue;
+};
+
+export const useArray = <T>(initial: T[]) => {
+  const [value, setValue] = useState(initial);
+
+  return {
+    value,
+    setValue,
+    add: (item: T) => setValue([...value, item]),
+    clear: () => setValue([]),
+    removeIndex: (index: number) => {
+      const copy = [...value];
+      copy.splice(index, 1);
+      setValue(copy);
+    },
+  };
 };
