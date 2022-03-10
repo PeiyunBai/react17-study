@@ -2,9 +2,9 @@
  * @Author: baipeiyun
  * @Date: 2022-03-07 20:29:13
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-09 14:41:59
+ * @LastEditTime: 2022-03-10 18:43:13
  * @FilePath: /482mooc-react17/src/screen/try-use-array/index.tsx
- * @Description:
+ * @Description: 作业题
  */
 import React from "react";
 import { useArray } from "utils/index";
