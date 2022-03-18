@@ -3,7 +3,7 @@ import { User } from './screen/project-list/search-panel';
  * @Author: baipeiyun
  * @Date: 2022-03-10 20:23:22
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-18 10:51:14
+ * @LastEditTime: 2022-03-18 18:54:09
  * @FilePath: /482mooc-react17/src/auth-provider.ts
  * @Description: 帮助操控token
  */
@@ -12,7 +12,9 @@ import { User } from './screen/project-list/search-panel';
 import { User } from "screen/project-list/search-panel";
 const apiUrl = process.env.REACT_APP_API_URL;
 const localStorageKey = "__auth_provider_token__";
+
 export const getToken = () => window.localStorage.getItem(localStorageKey);
+
 export const handleUserResponse = ({ user }: { user: User }) => {
   window.localStorage.setItem(localStorageKey, user.token || "");
   return user;
