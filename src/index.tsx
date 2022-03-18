@@ -2,7 +2,7 @@
  * @Author: baipeiyun
  * @Date: 2022-01-14 17:59:38
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-10 20:08:37
+ * @LastEditTime: 2022-03-18 14:37:39
  * @FilePath: /482mooc-react17/src/index.tsx
  * @Description:
  */
@@ -12,11 +12,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { loadDevTools } from "jira-dev-tool";
+import { AppProviders } from "context/index";
 
 loadDevTools(() => {
   ReactDOM.render(
     <React.StrictMode>
-      <App />
+      <AppProviders>
+        <App />
+      </AppProviders>
     </React.StrictMode>,
     document.getElementById("root")
   );

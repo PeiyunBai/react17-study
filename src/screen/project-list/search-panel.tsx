@@ -2,7 +2,7 @@
  * @Author: baipeiyun
  * @Date: 2022-03-03 15:15:56
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-07 18:37:53
+ * @LastEditTime: 2022-03-10 20:30:28
  * @FilePath: /482mooc-react17/src/screen/project-list/search-panel.tsx
  * @Description:
  */
@@ -14,6 +14,7 @@ export interface User {
   email: string;
   title: string;
   organization: string;
+  token: string;
 }
 interface SearchPanelProps {
   users: User[];

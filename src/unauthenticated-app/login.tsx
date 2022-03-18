@@ -1,27 +1,16 @@
 /*
  * @Author: baipeiyun
- * @Date: 2022-03-09 14:44:31
+ * @Date: 2022-03-18 16:32:54
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-10 14:21:33
- * @FilePath: /482mooc-react17/src/screen/login/index.tsx
+ * @LastEditTime: 2022-03-18 16:35:53
+ * @FilePath: /482mooc-react17/src/unauthenticated-app/login.tsx
  * @Description:
  */
+import { useAuth } from "context/auth-context";
 import React, { FormEvent } from "react";
 const apiUrl = process.env.REACT_APP_API_URL;
 export const LoginScreen = () => {
-  const login = (param: { username: string; password: string }) => {
-    //  fetch传参 （了解）
-    fetch(`${apiUrl}/login`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(param),
-    }).then(async (response) => {
-      if (response.ok) {
-      }
-    });
-  };
+  const { login, user } = useAuth();
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
