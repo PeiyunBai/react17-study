@@ -2,7 +2,7 @@
  * @Author: baipeiyun
  * @Date: 2022-01-14 17:59:38
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-18 14:37:39
+ * @LastEditTime: 2022-03-19 19:22:28
  * @FilePath: /482mooc-react17/src/index.tsx
  * @Description:
  */
@@ -13,6 +13,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { loadDevTools } from "jira-dev-tool";
 import { AppProviders } from "context/index";
+import "antd/dist/antd.less";
 
 loadDevTools(() => {
   ReactDOM.render(

@@ -2,7 +2,7 @@
  * @Author: baipeiyun
  * @Date: 2022-03-18 16:50:53
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-18 18:49:51
+ * @LastEditTime: 2022-03-19 19:21:42
  * @FilePath: /482mooc-react17/src/utils/http.ts
  * @Description:
  */
@@ -58,6 +58,8 @@ export const http = async (
 
 export const useHttp = () => {
   const { user } = useAuth();
+  //  注意：这里的typeof是ts中的，是在静态环境运行的，是用来操作类型的
+  //  跟js中的typeof没关系，js中的是在代码运行时执行
   return (...[endpoint, config]: Parameters<typeof http>) =>
     http(endpoint, { ...config, token: user?.token });
 };

@@ -2,12 +2,12 @@
  * @Author: baipeiyun
  * @Date: 2022-03-03 15:15:56
  * @LastEditors: baipeiyun
- * @LastEditTime: 2022-03-10 20:30:28
+ * @LastEditTime: 2022-03-19 20:10:43
  * @FilePath: /482mooc-react17/src/screen/project-list/search-panel.tsx
  * @Description:
  */
 import React from "react";
-
+import { Form, Input, Select } from "antd";
 export interface User {
   id: string;
   name: string;
@@ -27,9 +27,9 @@ interface SearchPanelProps {
 
 export const SearchPanel = ({ param, setParam, users }: SearchPanelProps) => {
   return (
-    <form>
+    <Form>
       <div>
-        <input
+        <Input
           type="text"
           value={param.name}
           onChange={(e) =>
@@ -39,23 +39,23 @@ export const SearchPanel = ({ param, setParam, users }: SearchPanelProps) => {
             })
           }
         />
-        <select
+        <Select
           value={param.personId}
-          onChange={(e) =>
+          onChange={(value) =>
             setParam({
               ...param,
-              personId: e.target.value,
+              personId: value,
             })
           }
         >
-          <option value={""}>负责人</option>
+          <Select.Option value={""}>负责人</Select.Option>
           {users.map((item) => (
-            <option value={item.id} key={item.id}>
+            <Select.Option value={item.id} key={item.id}>
               {item.name}
-            </option>
+            </Select.Option>
           ))}
-        </select>
+        </Select>
       </div>
-    </form>
+    </Form>
   );
 };

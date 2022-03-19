@@ -5,6 +5,7 @@
   "dependencies": {
     "@commitlint/cli": "^16.0.2",
     "@commitlint/config-conventional": "^16.0.0",
+    "@craco/craco": "^6.4.3",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -12,6 +13,8 @@
     "@types/node": "^16.11.19",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "antd": "^4.19.2",
+    "craco-less": "^2.0.0",
     "jira-dev-tool": "^1.7.61",
     "qs": "^6.10.3",
     "react": "^17.0.2",
@@ -21,9 +24,9 @@
     "web-vitals": "^2.1.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "json-server": "json-server __json_server_mock__/db.json --watch --port 3009 --middlewares ./__json_server_mock__/middleware.js"
